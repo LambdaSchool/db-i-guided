@@ -9,7 +9,9 @@
     "repository": "https://github.com/LambdaSchool/node-db1-guided.git",
     "license": "MIT",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "knex": "^0.21.17",
+        "sqlite3": "^5.0.1"
     },
     "devDependencies": {
         "eslint": "^7.20.0",
