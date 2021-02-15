@@ -25,10 +25,17 @@ function create(post) {
     })
 }
 
-function update() {
-  return Promise.resolve('update wired')
+function update(id,post) {
+  const postId = id
+  return db("posts").where("id",id).update(post)
+    .then(()=>{
+      return db("posts").where("id",postId).first()
+    })
 }
 
-function remove() {
-  return Promise.resolve('delete wired')
+function remove(id) {
+  return db("posts").where("id",id).del()
+    .then(()=>{
+      return db("posts")
+    })
 }
